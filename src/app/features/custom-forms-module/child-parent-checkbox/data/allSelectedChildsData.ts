@@ -1,0 +1,53 @@
+export const allSelectedChildsData = [
+    {
+        ID: 136,
+        TASK_NAME: "Bill",
+        TEXT: "Bill",
+        URL: "~/Report/Viewer/Bill.aspx",
+        PARENTID: 121,
+        CREATE_BY: null,
+        CREATE_DATE: "2016-03-12T15:28:30",
+        FOR_ALL: null,
+        ORDER_COL: 1,
+        ICON: "fa-money",
+        UPDATE_BY: "sa",
+        UPDATE_DATE: "2016-06-07T10:58:24",
+        PARENT_CLASS: null,
+        HASCHILD: 0,
+        ROLE_ID: "141"
+    },
+    {
+        ID: 137,
+        TASK_NAME: "Customer Ledger",
+        TEXT: "Customer Ledger",
+        URL: "~/Report/Viewer/Ledger.aspx",
+        PARENTID: 121,
+        CREATE_BY: null,
+        CREATE_DATE: "2016-03-12T15:28:30",
+        FOR_ALL: null,
+        ORDER_COL: 2,
+        ICON: "fa-list-alt",
+        UPDATE_BY: "sa",
+        UPDATE_DATE: "2020-01-05T22:43:58",
+        PARENT_CLASS: null,
+        HASCHILD: 0,
+        ROLE_ID: "141"
+    },
+    {
+        ID: 135,
+        TASK_NAME: "Certificate",
+        TEXT: "Certificate",
+        URL: "~/Report/Viewer/Certificate.aspx",
+        PARENTID: 121,
+        CREATE_BY: null,
+        CREATE_DATE: "2016-03-12T15:28:30",
+        FOR_ALL: null,
+        ORDER_COL: 4,
+        ICON: "fa-certificate",
+        UPDATE_BY: "sa",
+        UPDATE_DATE: "2016-06-07T10:54:50",
+        PARENT_CLASS: null,
+        HASCHILD: 0,
+        ROLE_ID: "141"
+    }
+]

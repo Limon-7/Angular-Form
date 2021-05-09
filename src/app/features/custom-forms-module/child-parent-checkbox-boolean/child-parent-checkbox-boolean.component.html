@@ -1,0 +1,28 @@
+<p>child-parent-checkbox-boolean works!</p>
+<form [formGroup]="myform" (ngSubmit)="onSubmit()">
+  <div
+    class="form-group"
+    *ngFor="let parent of parenttasksFormArray.controls; let i = index"
+  >
+    <label formArrayName="parentTasks">
+      <input type="checkbox" [formControlName]="i" />
+      {{ parentChildData[i].TASK_NAME }}
+      <!-- <ng-container *ngIf="parentChildData[i].childTask">
+        <div
+          class="form-group"
+          *ngFor="let child of childTaskFormArray.controls; let k = index"
+        >
+          <label formArrayName="childTasks">
+            <input type="checkbox" [formControlName]="k" />
+            {{ parentChildData[i]?.childTask[k]?.TASK_NAME }}
+          </label>
+        </div>
+      </ng-container> -->
+    </label>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+  {{ myform.value | json }}
+  {{ myform.status | json }}
+</form>

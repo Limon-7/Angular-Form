@@ -1,0 +1,32 @@
+<h1>multiple-checkbox Demo</h1>
+<form [formGroup]="myform" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="username">User Name</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="username"
+      placeholder="User name ex:limon"
+      [ngClass]="{ 'is-invalid': f.username.errors && f.username.touched }"
+    />
+  </div>
+  <div class="form-group">
+    <label for="skills" *ngFor="let skill of skillList">
+      <input
+        type="checkbox"
+        [value]="skill.id"
+        (change)="onCbChange($event)"
+        [checked]="selectedSkills.includes(skill.id)"
+      />
+      {{ skill.name }}
+    </label>
+    <div *ngIf="skillFormArray.errors" class="validation-error">
+      Skills is required
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!myform.valid">
+    Save
+  </button>
+  {{ myform.value | json }}
+  {{ myform.status | json }}
+</form>

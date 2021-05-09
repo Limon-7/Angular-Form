@@ -1,0 +1,33 @@
+<form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+  <div class="form-group">
+    Name:
+    <input
+      formControlName="name"
+      placeholder="Enter Name"
+      class="form-control"
+    />
+  </div>
+  <ng-templete formArrayName="users">
+    <div *ngFor="let user of users.controls; index as i" class="form-group">
+      UserName:
+      <input
+        [formControlName]="i"
+        placeholder="Enter ex:limon"
+        class="from-control"
+      />
+      <button
+        type="button"
+        (click)="deleteUserField(id)"
+        class="btn btn-danger"
+      >
+        Delete
+      </button>
+    </div>
+  </ng-templete>
+  <button type="button" (click)="addUserField()" class="btn btn-primary">
+    Add More User
+  </button>
+  <button type="submit" class="btn btn-primary ml-5">Submit</button>
+</form>
+{{ userForm.value | json }}
+{{ userForm.status | json }}

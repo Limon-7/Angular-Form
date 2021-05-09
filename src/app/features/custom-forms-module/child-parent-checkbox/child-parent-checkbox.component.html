@@ -1,0 +1,49 @@
+<p>child-parent-checkbox works!</p>
+
+<form [formGroup]="myform" (ngSubmit)="onSubmit()">
+  <div class="form-group" *ngFor="let parent of parentChildData">
+    <label for="parentTasks">
+      <input
+        type="checkbox"
+        [value]="parent.ID"
+        (change)="onParentChange($event, parent.childTask)"
+        [checked]="isParentToCheck(parent.ID)"
+      />
+      {{ parent.TASK_NAME }}
+      {{ parent.ID }}
+
+      <button
+        *ngIf="parent.childTask"
+        class="btn btn-primary"
+        type="button"
+        data-toggle="collapse"
+        attr.data-target="#col_{{ parent.ID }}"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        toggle
+      </button>
+      <div id="col_{{ parent.ID }}" class="collapse">
+        <div class="form-check" *ngFor="let child of parent.childTask">
+          <label class="form-check-label" for="childTasks">
+            <input
+              type="checkbox"
+              [value]="child.ID"
+              (change)="onChildChange($event)"
+              [checked]="
+                child.isSelected
+                  ? child.isSelected
+                  : isChildToCheck(child.ID, child.isSelected)
+              "
+            />
+            {{ child.TASK_NAME }}
+            {{ child.ID }}
+          </label>
+        </div>
+      </div>
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Update Task</button>
+  {{ myform.value | json }}
+  {{ myform.status | json }}
+</form>
