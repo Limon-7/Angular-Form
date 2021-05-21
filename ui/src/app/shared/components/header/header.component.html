@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"
+          >Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+
+      <li class="nav-item dropdown" [routerLinkActive]="['active']">
+        <a
+          class="nav-link dropdown-toggle"
+          id="formDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [routerLinkActive]="['active-router-link']"
+        >
+          Forms
+        </a>
+        <div class="dropdown-menu" aria-labelledby="formDropdown">
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/forms/form-control']"
+            routerLinkActive="active-router-link"
+            >FormControl</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/forms/form-control-group']"
+            routerLinkActive="active-router-link"
+            >Form Control-Group</a
+          >
+
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/forms/formArray']"
+            routerLinkActive="active-router-link"
+            >Form Array</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/forms/select']"
+            routerLinkActive="active-router-link"
+            >Select Options</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/forms/radio-checkbox']"
+            routerLinkActive="active-router-link"
+            >Radio Checkbox</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/forms/multiple-checkbox']"
+            routerLinkActive="active-router-link"
+            >Multiple Checkbox</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/forms/child-parent-checkbox']"
+            routerLinkActive="active-router-link"
+            >Child Parent Checkbox</a
+          >
+
+          <div class="dropdown-divider"></div>
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/forms/child-parent-boolean']"
+            routerLinkActive="active-router-link"
+            >Child-Parent-Boolean</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/forms/register']"
+            routerLinkActive="active-router-link"
+            >Signup</a
+          >
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a
+          class="nav-link"
+          [routerLink]="['/features/rxjs/dashboard']"
+          routerLinkActive="active-router-link"
+          >Rxjs
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

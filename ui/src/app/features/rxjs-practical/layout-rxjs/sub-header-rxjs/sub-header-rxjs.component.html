@@ -1,0 +1,336 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light"
+  style="background-color: #e3f2fd"
+>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent2"
+    aria-controls="navbarSupportedContent2"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+    <ul class="navbar-nav mr-auto">
+      <!-- combination -->
+      <li class="nav-item dropdown" [routerLinkActive]="['active']">
+        <a
+          class="nav-link dropdown-toggle"
+          id="combinationDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [routerLinkActive]="['active-router-link']"
+        >
+          Combination
+        </a>
+        <div class="dropdown-menu" aria-labelledby="combinationDropdown">
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/combination/combine']"
+            routerLinkActive="active-router-link"
+            >Combine/All</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/combination/concate']"
+            routerLinkActive="active-router-link"
+            >Concate/All</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/combination/forkJoin']"
+            routerLinkActive="active-router-link"
+            >ForkJoin</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/combination/mergeAll']"
+            routerLinkActive="active-router-link"
+            >MergeAll</a
+          >
+        </div>
+      </li>
+      <!-- end of combination -->
+      <!-- creation -->
+      <li class="nav-item dropdown" [routerLinkActive]="['active']">
+        <a
+          class="nav-link dropdown-toggle"
+          id="creationDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [routerLinkActive]="['active-router-link']"
+        >
+          Creation
+        </a>
+        <div class="dropdown-menu" aria-labelledby="creationDropdown">
+          <!-- <div class="dropdown-divider"></div>
+          <div class="dropdown-header text-success">Creation</div> -->
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/c/create']"
+            routerLinkActive="active-router-link"
+            >Create</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/c/from']"
+            routerLinkActive="active-router-link"
+            >Form</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/c/fromEvent']"
+            routerLinkActive="active-router-link"
+            >Form-event</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/c/interval-timer']"
+            routerLinkActive="active-router-link"
+            >interval-timer</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/c/of']"
+            routerLinkActive="active-router-link"
+            >of</a
+          >
+        </div>
+      </li>
+      <!-- error handling -->
+      <li class="nav-item dropdown" [routerLinkActive]="['active']">
+        <a
+          class="nav-link dropdown-toggle"
+          id="errorHandlingDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [routerLinkActive]="['active-router-link']"
+        >
+          Error Handling
+        </a>
+        <div class="dropdown-menu" aria-labelledby="errorHandlingDropdown">
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-header text-success">Error Handling</div>
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/error/throw-error']"
+            routerLinkActive="active-router-link"
+            >ThrowError</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/error/catch-error']"
+            routerLinkActive="active-router-link"
+            >catch-error</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/error/retry-retrywhen']"
+            routerLinkActive="active-router-link"
+            >Retry-Retrywhen</a
+          >
+        </div>
+      </li>
+      <!-- end of error handling  -->
+      <!-- filtering -->
+      <li class="nav-item dropdown" [routerLinkActive]="['active']">
+        <a
+          class="nav-link dropdown-toggle"
+          id="filteringDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [routerLinkActive]="['active-router-link']"
+        >
+          Filtering
+        </a>
+        <div class="dropdown-menu" aria-labelledby="filteringDropdown">
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/f/filter']"
+            routerLinkActive="active-router-link"
+            >Filter</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/f/take']"
+            routerLinkActive="active-router-link"
+            >Take</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/f/debounce']"
+            routerLinkActive="active-router-link"
+            >Debounce</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/f/skip']"
+            routerLinkActive="active-router-link"
+            >Skip</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/f/first2last']"
+            routerLinkActive="active-router-link"
+            >First-Last</a
+          >
+        </div>
+      </li>
+      <!-- end of filtering -->
+      <!-- transformation -->
+      <li class="nav-item dropdown" [routerLinkActive]="['active']">
+        <a
+          class="nav-link dropdown-toggle"
+          id="transformationDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [routerLinkActive]="['active-router-link']"
+        >
+          Transformation
+        </a>
+        <div class="dropdown-menu" aria-labelledby="transformationDropdown">
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-header text-success">Transformation</div>
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/t/concatMap']"
+            routerLinkActive="active-router-link"
+            >ConcatMap</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/t/exhaustMap']"
+            routerLinkActive="active-router-link"
+            >exhaustMap</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/t/mergeMap']"
+            routerLinkActive="active-router-link"
+            >mergeMap</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/t/switchMap']"
+            routerLinkActive="active-router-link"
+            >ConcatMap</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/t/map']"
+            routerLinkActive="active-router-link"
+            >Map</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/t/scan']"
+            routerLinkActive="active-router-link"
+            >Scan</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/t/reduce']"
+            routerLinkActive="active-router-link"
+            >Reduce</a
+          >
+        </div>
+      </li>
+      <!-- end of transformation -->
+      <!-- utility -->
+      <li class="nav-item dropdown" [routerLinkActive]="['active']">
+        <a
+          class="nav-link dropdown-toggle"
+          id="utilityDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [routerLinkActive]="['active-router-link']"
+        >
+          utility
+        </a>
+        <div class="dropdown-menu" aria-labelledby="utilityDropdown">
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/u/tap']"
+            routerLinkActive="active-router-link"
+            >Tap</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/u/delay-when']"
+            routerLinkActive="active-router-link"
+            >Delay-When</a
+          >
+        </div>
+      </li>
+      <!-- end of utility -->
+
+      <!-- subjects -->
+      <li class="nav-item dropdown" [routerLinkActive]="['active']">
+        <a
+          class="nav-link dropdown-toggle"
+          id="subjectsDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [routerLinkActive]="['active-router-link']"
+        >
+          Subjects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="subjectsDropdown">
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/s/subject']"
+            routerLinkActive="active-router-link"
+            >Subject</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/s/behavior-subject']"
+            routerLinkActive="active-router-link"
+            >BehaviorSubject</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/s/async-subject']"
+            routerLinkActive="active-router-link"
+            >AsyncSubject</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/rxjs/s/reply-subject']"
+            routerLinkActive="active-router-link"
+            >ReplySubject</a
+          >
+        </div>
+      </li>
+      <!-- end of subjects -->
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ml-auto" [routerLinkActive]="['active']">
+        <a
+          class="nav-link"
+          [routerLink]="['/features/rxjs/promise']"
+          routerLinkActive="active-router-link"
+          >Promise
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
