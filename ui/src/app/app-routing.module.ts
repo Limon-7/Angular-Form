@@ -9,7 +9,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { preloadingStrategy: false })],
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: false })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

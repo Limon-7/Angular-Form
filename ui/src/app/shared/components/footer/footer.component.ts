@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
+import { UserCountService } from 'src/app/core/services/user-count.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private userCountService: UserCountService) { }
+  user = 0;
   ngOnInit(): void {
+    this.userCountService.userCount.subscribe(val => {
+      console.log("val:", val)
+      this.user = val
+    })
   }
+
+
 
 }

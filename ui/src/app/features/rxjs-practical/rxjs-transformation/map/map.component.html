@@ -1,1 +1,35 @@
-<p>map works!</p>
+<section class="map">
+  <h1 class="text-center">Map</h1>
+  <p>
+    Map operator takes an observable source as input. It applies a project
+    function to each of the values emitted by the source observable and
+    transforms it into a new value. It then emits the new value to the
+    subscribers.
+  </p>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">[5,6,7,8]*10</div>
+        <div class="card-body">
+          <ul class="list-group" id="mapConatiner1"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">[5, 6, 7, 8, 9, 10] Even</div>
+        <div class="card-body">
+          <ul class="list-group" id="mapConatiner2"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">Concat first name and lastname</div>
+        <div class="card-body">
+          <ul class="list-group" id="mapConatiner3"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

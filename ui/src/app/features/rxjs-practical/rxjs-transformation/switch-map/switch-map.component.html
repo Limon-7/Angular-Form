@@ -1,1 +1,41 @@
-<p>switch-map works!</p>
+<section class="map">
+  <h1 class="text-center">switchMap</h1>
+  <p>
+    Whenever SwitchMap subscribes to a new inner observable, it unsubscribes
+    from the previous one.
+  </p>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <button class="btn btn-primary btn-sm" #btn1>ClickMe</button>
+          <button class="btn btn-danger btn-sm ml-2" (click)="destroy()">
+            Cancel
+          </button>
+        </div>
+        <div class="card-body">
+          <ul class="list-group" id="switchMapConatiner1"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">Most use cases</div>
+        <div class="card-body">
+          <ul class="list-group" id="switchMapConatiner2">
+            <li>With Route Parameters</li>
+            <li>Forms ValueChanges event</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">Concat first name and lastname</div>
+        <div class="card-body">
+          <ul class="list-group" id="switchMapConatiner3"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

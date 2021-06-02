@@ -1,1 +1,74 @@
-<p>take-until-while-last works!</p>
+<section>
+  <h3>
+    take(n:number) takeLast(n:number) takeWhile(predict:boolean,
+    inclusible?:boolean)
+  </h3>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h6>
+            take(n:number):Take operator emits the first n number of values
+            before completing. Any reminder values are ignored.
+          </h6>
+          <p>[1, 2, 3, 4, 5] take(2)</p>
+        </div>
+        <div class="card-body">
+          <ul class="list-group" id="takeConatiner"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h6>
+            takeLast(n:number):The TakeLast operator emits the last n number of
+            values from the source observable.To know the last n number of
+            values, the TakeLast needs to wait for the source to complete.
+          </h6>
+          <p>[1, 2, 3, 4, 5] takeLast(2)</p>
+        </div>
+        <div class="card-body">
+          <ul class="list-group" id="takeLastConatiner"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row my-1">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h6>
+            takeWhile(predict:boolean, inclusive?:boolean):Observable -TakeWhile
+            operator will keep emitting the value from the source observable as
+            long as they pass the given condition (predicate). When it receives
+            a value that does not satisfy the condition it completes the
+            observable.
+          </h6>
+          <p>[1, 2, 3, 4, 5] takeWhile(predict)</p>
+        </div>
+        <div class="card-body">
+          <ul class="list-group" id="takeWhileConatiner"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h6>
+            takeUntill(notifier:observable):Observable-The takeUntil operator
+            returns an Observable that emits value from the source Observable
+            until the notifier Observable emits a value.
+          </h6>
+          <p>[1, 2, 3, 4, 5] takeLast(2)</p>
+          <button class="btn btn-primary btn-sm" (click)="destroyObservable()">
+            Cancle
+          </button>
+        </div>
+        <div class="card-body">
+          <ul class="list-group" id="takeUntillConatiner"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
