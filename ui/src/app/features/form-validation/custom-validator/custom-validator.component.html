@@ -1,5 +1,10 @@
 <div class="container mt-4">
-  <form focusInvalidInput [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <form
+    focusInvalidInput
+    [formGroup]="myForm"
+    (ngSubmit)="onSubmit()"
+    id="validateForm"
+  >
     {{ myForm.status | json }}
     {{ myForm.value | json }}
     <div class="container">

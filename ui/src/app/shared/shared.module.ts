@@ -7,8 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { IsUsernameExitsPasswordDirective } from './directives/is-username-exits-password.directive';
 import { ConfirmPasswordValidatorDirective } from './directives/confirm-password-validator.directive';
 import { FormFocusDirective } from './directives/form-focus.directive';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
+
 
 
 
@@ -25,8 +24,8 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     CommonModule,
     RouterModule,
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
+    // BrowserAnimationsModule, // required animations module
+    // ToastrModule.forRoot(), // ToastrModule added
   ],
   exports: [
     HeaderComponent,
@@ -34,8 +33,8 @@ import { ToastrModule } from 'ngx-toastr';
     HomeComponent,
     IsUsernameExitsPasswordDirective,
     FormFocusDirective,
-    ToastrModule,
-    BrowserAnimationsModule,
+    // ToastrModule,
+    // BrowserAnimationsModule,
   ]
 })
 export class SharedModule { }
