@@ -98,6 +98,60 @@
         </div>
       </li>
       <!-- end form drop down -->
+      <!-- start advance angular section -->
+      <li class="nav-item dropdown" [routerLinkActive]="['active']">
+        <a
+          class="nav-link dropdown-toggle"
+          id="advanceDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [routerLinkActive]="['active-router-link']"
+        >
+          Advance
+        </a>
+        <div class="dropdown-menu" aria-labelledby="advanceDropdown">
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/advance/content-projection']"
+            routerLinkActive="active-router-link"
+            >Ng Content</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/advance/component-communication']"
+            routerLinkActive="active-router-link"
+            >Component-Communication</a
+          >
+
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/advance/templete-reference']"
+            routerLinkActive="active-router-link"
+            >Templete-reference</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/advance/ng-template']"
+            routerLinkActive="active-router-link"
+            >ng-template</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/advance/ng-template-outlet']"
+            routerLinkActive="active-router-link"
+            >ng-template-outlet</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/advance/renderer2']"
+            routerLinkActive="active-router-link"
+            >Render2</a
+          >
+        </div>
+      </li>
+      <!-- end advance angular section -->
       <!-- form-validation -->
       <li class="nav-item dropdown" [routerLinkActive]="['active']">
         <a
@@ -164,6 +218,18 @@
             [routerLink]="['/features/animation/open-close']"
             routerLinkActive="active-router-link"
             >Open-close
+          </a>
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/animation/todos']"
+            routerLinkActive="active-router-link"
+            >Todos
+          </a>
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/animation/zippy']"
+            routerLinkActive="active-router-link"
+            >Zippy
           </a>
         </div>
       </li>

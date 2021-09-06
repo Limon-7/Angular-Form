@@ -1,0 +1,126 @@
+<div class="container ng-template">
+  <h3>Ng template example</h3>
+  <div class="one border border-primary rounded p-1">
+    <h3>Using *ngTemplateOutlet</h3>
+    <ng-container *ngTemplateOutlet="sayHelloTemplate"></ng-container>
+    <ng-template #sayHelloTemplate>
+      <p>Using *ngTemplateOutlet directive</p>
+    </ng-template>
+  </div>
+  <div class="two">
+    <ng-template #helloTemplate>
+      <div class="container">
+        <div class="border border-primary rounded p-2">
+          <h3>TempplateRef and ViewContainerRef</h3>
+          <p>Show Template using TempplateRef and ViewContainerRef</p>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  <!-- Custom directive -->
+  <div class="three border border-primary rounded p-1 mt-1 mb-1">
+    <h3>Using custom directive</h3>
+    Show/hide
+    <input type="checkbox" [(ngModel)]="selected" />
+
+    <div *ttIf="selected">Using the ttIf directive via *ttIf</div>
+
+    <ng-template [ttIf]="selected">
+      <div>
+        <p>Using the ttIf directive via ng-template</p>
+      </div>
+    </ng-template>
+  </div>
+  <!-- end of custom directive -->
+</div>
+<!-- ngtemplate-if-else -->
+<section
+  class="container ngtemplate-if-else border border-secondary rounded p-1"
+>
+  <div class="one">
+    <h2>Using ngTemplate with ngIf then & else</h2>
+
+    <div *ngIf="selected; then thenBlock1; else elseBlock1">
+      <p>This content is not shown</p>
+    </div>
+
+    <ng-template #thenBlock1>
+      <p>content to render when the selected is true.</p>
+    </ng-template>
+
+    <ng-template #elseBlock1>
+      <p>content to render when selected is false.</p>
+    </ng-template>
+  </div>
+  <!-- ng-template with if-else -->
+  <div class="two">
+    <h3>Using only ng-template</h3>
+    <ng-template
+      [ngIf]="selected"
+      [ngIfThen]="thenBlock2"
+      [ngIfElse]="elseBlock2"
+    >
+      <div>
+        <p>This content is not shown</p>
+      </div>
+    </ng-template>
+
+    <ng-template #thenBlock2>
+      <p>content to render when the selected is true.</p>
+    </ng-template>
+
+    <ng-template #elseBlock2>
+      <p>content to render when selected is false.</p>
+    </ng-template>
+  </div>
+  <!-- ng-template with if-else -->
+</section>
+<!-- end ngtemplate-if-else -->
+<!-- ngtemplate-switch -->
+<section
+  class="
+    container
+    ng-template-switchcase
+    border border-primary
+    rounded
+    p-1
+    mt-1
+    mb-1
+  "
+>
+  <div class="one border border-primary rounded p-1 mt-1 mb-1">
+    <h3>Using Switchcase</h3>
+    <input type="text" [(ngModel)]="num" />
+
+    <div [ngSwitch]="num">
+      <div *ngSwitchCase="'1'">One</div>
+      <div *ngSwitchCase="'2'">Two</div>
+      <div *ngSwitchCase="'3'">Three</div>
+      <div *ngSwitchCase="'4'">Four</div>
+      <div *ngSwitchCase="'5'">Five</div>
+      <div *ngSwitchDefault>This is Default</div>
+    </div>
+  </div>
+  <div [ngSwitch]="num" class="border border-primary rounded p-1 mt-1 mb-1">
+    <h3>Using ngTemplate with ng switchcase</h3>
+    <ng-template [ngSwitchCase]="'1'">
+      <div>One</div>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'2'">
+      <div>Two</div>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'3'">
+      <div>Three</div>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'4'">
+      <div>Four</div>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'5'">
+      <div>Five</div>
+    </ng-template>
+    <ng-template ngSwitchDefault>
+      <div>This is default</div>
+    </ng-template>
+  </div>
+</section>
+<!-- ngtemplate-switch -->

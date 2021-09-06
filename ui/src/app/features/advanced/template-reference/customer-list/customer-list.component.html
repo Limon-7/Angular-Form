@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>List of Customers</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Select</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let customer of customers">
+        <tr
+          [ngClass]="{
+            'text-danger': selectedCustomer?.name == customer?.name
+          }"
+        >
+          <td>{{ customer.customerNo }}</td>
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.address }}</td>
+          <td>{{ customer.city }}</td>
+          <td>{{ customer.state }}</td>
+          <button
+            class="btn btn-secondary"
+            (click)="selectedCustomer = customer"
+          >
+            Select
+          </button>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

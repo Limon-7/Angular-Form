@@ -1,0 +1,60 @@
+<section class="template-outlet">
+  <ng-template #tem1 let-grettings let-value="value">
+    <div class="container">
+      <p class="text-danger">
+        This is our template. It will be displayed on the div
+        *ngTemplateOutlet="myTemplateRef" and value
+        <strong> {{ grettings }} {{ value }}</strong>
+      </p>
+    </div>
+  </ng-template>
+  <ng-container
+    [ngTemplateOutlet]="tem1"
+    [ngTemplateOutletContext]="{ value: '1000' }"
+  >
+    This text is not displayed
+  </ng-container>
+  <div
+    *ngTemplateOutlet="tem1; context: { $implicit: 'hello', value: 'limon' }"
+  >
+    using div
+  </div>
+</section>
+
+<!-- passing templete parent to child -->
+<section class="container parent">
+  <ng-template #parentTemplate>
+    <p>
+      This Template is defined in Parent. We will send it to child component
+    </p>
+  </ng-template>
+  <app-template-outlet-child
+    [customTemplate]="parentTemplate"
+  ></app-template-outlet-child>
+</section>
+<!-- end of passing templete parent to child -->
+<hr />
+<section class="container">
+  <label for="mode">Display Mode:</label>
+  <select [(ngModel)]="mode">
+    <option *ngFor="let item of modeOptions" [ngValue]="item.mode">
+      {{ item.mode }}
+    </option>
+  </select>
+  <ng-template let-items #cardTemplate>
+    <div *ngFor="let item of items">
+      <h1>{{ item.header }}</h1>
+      <p>{{ item.content }}</p>
+    </div>
+  </ng-template>
+
+  <ng-template let-items #listTemplate>
+    <ul>
+      <li *ngFor="let item of items">
+        <strong>{{ item.header }} </strong> ( {{ item.content }} )
+      </li>
+    </ul>
+  </ng-template>
+  <app-list-item [itemTemplate]="template" [items]="items"> </app-list-item>
+</section>
+<!-- create a template for list view and cardview -->

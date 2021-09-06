@@ -1,7 +1,10 @@
 <div class="d-flex flex-column h-100">
   <app-header></app-header>
-  <div><button class="btn btn-primary" (click)="notify()">ClickMe</button></div>
-  <div class="container-fluid" style="margin: 0; padding: 0px">
+  <!-- <div><button class="btn btn-primary" (click)="notify()">ClickMe</button></div> -->
+  <div
+    class="container-fluid"
+    style="margin: 0; padding: 0px; min-height: 500px; overflow: auto"
+  >
     <router-outlet></router-outlet>
   </div>
   <app-footer></app-footer>

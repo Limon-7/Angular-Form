@@ -12,7 +12,8 @@ export class OfComponent implements OnInit {
   constructor(private printService: PrintService) { }
 
   ngOnInit(): void {
-    of(['limon', 'likhon', 'lama']).subscribe(val => {
+    let ar = [1, 2, 4, 5];
+    of(ar, ['limon', 'likhon', 'lama']).subscribe(val => {
       console.log(val);
       this.printService.print(val, 'ofConatiner1');
     })
