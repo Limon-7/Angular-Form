@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="navlink mb-2">
+    <ul class="nav bg-light text-white">
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a
+          class="nav-link"
+          [routerLink]="['/features/advance/dom-manipulation/render2']"
+          routerLinkActive="active-router-link"
+          >Render2</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/features/advance/dom-manipulation/render3']"
+          routerLinkActive="active-router-link"
+          >Link</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/features/advance/dom-manipulation/render4']"
+          routerLinkActive="active-router-link"
+          >Link</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/features/advance/dom-manipulation/render5']"
+          routerLinkActive="active-router-link"
+          >Disabled</a
+        >
+      </li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
+</div>

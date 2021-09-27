@@ -1,0 +1,8 @@
+<section>
+  <div class="container">
+    <h3>Parent to child data communication using@Input()</h3>
+    <h5>Count: {{ count }}</h5>
+    <app-parent-child-siblings [count]="count"></app-parent-child-siblings>
+    <button class="btn btn-primary" (click)="increment()">Increment</button>
+  </div>
+</section>

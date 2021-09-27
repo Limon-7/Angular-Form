@@ -120,13 +120,6 @@
           >
           <a
             class="dropdown-item"
-            [routerLink]="['/features/advance/component-communication']"
-            routerLinkActive="active-router-link"
-            >Component-Communication</a
-          >
-
-          <a
-            class="dropdown-item"
             [routerLink]="['/features/advance/templete-reference']"
             routerLinkActive="active-router-link"
             >Templete-reference</a
@@ -145,13 +138,78 @@
           >
           <a
             class="dropdown-item"
-            [routerLink]="['/features/advance/renderer2']"
+            [routerLink]="['/features/advance/view-child']"
             routerLinkActive="active-router-link"
-            >Render2</a
+            >view-child</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/advance/view-children']"
+            routerLinkActive="active-router-link"
+            >View-children</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/advance/dom-manipulation']"
+            routerLinkActive="active-router-link"
+            >dom-manipulation</a
           >
         </div>
       </li>
       <!-- end advance angular section -->
+      <!-- start componentCommunication section -->
+      <li class="nav-item dropdown" [routerLinkActive]="['active']">
+        <a
+          class="nav-link dropdown-toggle"
+          id="advanceDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [routerLinkActive]="['active-router-link']"
+        >
+          Component Communication
+        </a>
+        <div class="dropdown-menu" aria-labelledby="advanceDropdown">
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/c-communication/parent-child/input']"
+            routerLinkActive="active-router-link"
+            >Parent-Child-Input</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/c-communication/input/chage-detection']"
+            routerLinkActive="active-router-link"
+            >Input-Chage-Detection</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/c-communication/child-parent/viewchild']"
+            routerLinkActive="active-router-link"
+            >Child-Parent-ViewChild</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/c-communication/child-parent/output']"
+            routerLinkActive="active-router-link"
+            >Child-Parent-Output</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/c-communication/service/subject']"
+            routerLinkActive="active-router-link"
+            >Communication-Subject</a
+          >
+          <a
+            class="dropdown-item"
+            [routerLink]="['/features/c-communication/ngzones']"
+            routerLinkActive="active-router-link"
+            >ngZones</a
+          >
+        </div>
+      </li>
+      <!-- end componentCommunication section -->
       <!-- form-validation -->
       <li class="nav-item dropdown" [routerLinkActive]="['active']">
         <a

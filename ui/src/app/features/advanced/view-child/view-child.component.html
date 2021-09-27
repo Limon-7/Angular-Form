@@ -1,0 +1,11 @@
+<section class="container viewchild">
+  <div class="pt-2">
+    <h2 #heading>Demo</h2>
+    <h3>current count is {{ child.count }}</h3>
+    <button class="btn btn-primary mr-2" (click)="increment()">
+      Increment
+    </button>
+    <button class="btn btn-secondary" (click)="decrement()">decrement</button>
+  </div>
+  <app-child></app-child>
+</section>

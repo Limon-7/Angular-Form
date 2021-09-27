@@ -6,12 +6,14 @@ const advanceModule = () => import("./advanced/advanced.module").then(x => x.Adv
 const rxjsModule = () => import("./rxjs-practical/rxjs-practical.module").then(x => x.RxjsPracticalModule);
 const formValidationModule = () => import("./form-validation/form-validation.module").then(x => x.FormValidationModule);
 const animationModule = () => import("./animation/animation.module").then(x => x.AnimationModule);
+const componnetCommunication = () => import("./component-communication/component-communication.module").then(x => x.ComponentCommunicationModule);
 
 const routes: Routes = [
   {
     path: "", children: [
       { path: "forms", loadChildren: formsModule },
       { path: "advance", loadChildren: advanceModule },
+      { path: "c-communication", loadChildren: componnetCommunication },
       { path: "rxjs", loadChildren: rxjsModule },
       { path: "form-validation", loadChildren: formValidationModule },
       { path: "animation", loadChildren: animationModule },

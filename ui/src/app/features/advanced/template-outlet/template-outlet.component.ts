@@ -8,8 +8,8 @@ import { AfterViewInit, Component, OnInit, TemplateRef, ViewChild } from '@angul
 export class TemplateOutletComponent implements OnInit, AfterViewInit {
 
   @ViewChild('parentTemplate') myTemplate: TemplateRef<HTMLElement>;
-  @ViewChild('cardTemplate') cardTemplate: TemplateRef<HTMLElement>;
-  @ViewChild('listTemplate') listTemplate: TemplateRef<HTMLElement>;
+  @ViewChild('cardTemplate', { static: true }) cardTemplate: TemplateRef<HTMLElement>;
+  @ViewChild('listTemplate', { static: true }) listTemplate: TemplateRef<HTMLElement>;
   isTrue = true;
   mode = "card"
   modeOptions = [
