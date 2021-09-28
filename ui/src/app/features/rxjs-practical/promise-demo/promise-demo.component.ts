@@ -24,7 +24,9 @@ export class PromiseDemoComponent implements OnInit {
       console.log("data:", data['comments']);
       this.allComments2 = data['comments'];
       this.allPosts2 = data['posts'];
+
     });
+    console.log("data fatching start:")
     this.activatedRoute.data.subscribe((res) => {
       this.allPosts = res.posts.posts.slice(1, 5);
       this.allComments = res.posts.comments.slice(1, 5)

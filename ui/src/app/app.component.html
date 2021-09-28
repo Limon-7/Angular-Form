@@ -7,8 +7,9 @@
   >
     <router-outlet></router-outlet>
   </div>
+  <div *ngIf="!isConnection">
+    <p>tou are ofline</p>
+  </div>
+  <input type="file" name="" #file id="" (change)="upload($event)" />
   <app-footer></app-footer>
-</div>
-<div *ngIf="!isConnection">
-  <p>tou are ofline</p>
 </div>
