@@ -5,6 +5,16 @@
     class="container-fluid"
     style="margin: 0; padding: 0px; min-height: 500px; overflow: auto"
   >
+    <file-pond
+      #myPond
+      [options]="pondOptions"
+      [files]="pondFiles"
+      (oninit)="pondHandleInit()"
+      (onaddfile)="pondHandleAddFile($event)"
+      (onactivatefile)="pondHandleActivateFile($event)"
+    >
+    </file-pond>
+
     <router-outlet></router-outlet>
   </div>
   <div *ngIf="!isConnection">

@@ -2,6 +2,8 @@ import { fromEvent, merge, Observable } from 'rxjs';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { map } from 'rxjs/operators';
+import { FilePondComponent } from 'ngx-filepond/filepond.component';
+import { FilePondOptions } from 'filepond';
 
 @Component({
   selector: 'app-root',
@@ -12,18 +14,62 @@ export class AppComponent implements OnInit {
   @ViewChild('file') file: File;
   title = 'practical-angular-core';
   isConnection: boolean;
+
+  @ViewChild('myPond') myPond: FilePondComponent
+
+  pondOptions = {
+    allowMultiple: true,
+    labelIdle: 'Drag & Drop your files or <span class="filepond--label-action"> Browse </span>',
+    allowImagePreview: true,
+    allowImageResize: true,
+    allowImageCrop: true,
+    imageCropAspectRatio: "1",
+    acceptedFileTypes: 'image/jpeg, image/png',
+    instantUpload: false,
+    allowImageTransform: true,
+    server: {
+      url: 'http://192.168.0.100',
+      process: {
+        url: './process',
+        method: 'POST',
+        withCredentials: false,
+        headers: {},
+        timeout: 7000,
+        onload: null,
+        onerror: null,
+        ondata: null,
+      },
+    }
+  }
+  pondFiles = ['index.html'];
+
+
+  pondHandleInit = () => {
+    console.log('FilePond has initialised', this.myPond);
+  }
+
+  pondHandleAddFile(event: any) {
+    let { file } = event;
+    console.log('A file was added', event.file.file);
+    console.log('PondFiles ', file);
+  }
+
+  pondHandleActivateFile(event: any) {
+    console.log('A file was activated', event)
+  }
   constructor(private toaster: ToastrService) {
+
+  }
+  ngOnInit() {
     this.createOnline$().subscribe(isonline => {
       this.isConnection = isonline;
       console.log("isonline:", isonline)
     })
   }
-  ngOnInit() {
-
-  }
   notify() {
     this.toaster.success('hello');
   }
+  //#region file compressed js
   createOnline$() {
     return merge<boolean>(
       fromEvent(window, "offline").pipe(map(() => false)),
@@ -81,7 +127,8 @@ export class AppComponent implements OnInit {
           resolve(f2);
         })
       })
-
     })
   }
+  //#endregion
+
 }
