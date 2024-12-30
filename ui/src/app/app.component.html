@@ -5,7 +5,7 @@
     class="container-fluid"
     style="margin: 0; padding: 0px; min-height: 500px; overflow: auto"
   >
-    <file-pond
+    <!-- <file-pond
       #myPond
       [options]="pondOptions"
       [files]="pondFiles"
@@ -13,13 +13,13 @@
       (onaddfile)="pondHandleAddFile($event)"
       (onactivatefile)="pondHandleActivateFile($event)"
     >
-    </file-pond>
+    </file-pond> -->
 
     <router-outlet></router-outlet>
   </div>
   <div *ngIf="!isConnection">
-    <p>tou are ofline</p>
+    <p>you are ofline</p>
   </div>
-  <input type="file" name="" #file id="" (change)="upload($event)" />
+  <!-- <input type="file" name="" #file id="" (change)="upload($event)" /> -->
   <app-footer></app-footer>
 </div>
