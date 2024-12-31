@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Parent Component</h2>
+  <div class="input-group">
+    <input
+      [(ngModel)]="parentMessage"
+      placeholder="Type input for child"
+      class="form-control"
+    />
+    <button (click)="toggleComponent()" class="ml-1 btn btn-danger">
+      Toggle Child Component
+    </button>
+  </div>
+
+  <app-profile *ngIf="isChildVisible" [message]="parentMessage">
+    <!-- Content projected into child -->
+    <p style="color: darkgreen">This is projected content from the parent!</p>
+  </app-profile>
+</div>

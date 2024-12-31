@@ -17,6 +17,7 @@ const routes: Routes = [
       { path: "rxjs", loadChildren: rxjsModule },
       { path: "form-validation", loadChildren: formValidationModule },
       { path: "animation", loadChildren: animationModule },
+      { path: "life-cycle", loadChildren: ()=>import('./life-cycle/life-cycle.module').then(mod=>mod.LifeCycleModule) },
     ]
   }
 ];

@@ -12,7 +12,7 @@ export class FooterComponent implements OnInit {
   user = 0;
   ngOnInit(): void {
     this.userCountService.userCount.subscribe(val => {
-      console.log("val:", val)
+      // console.log("val:", val)
       this.user = val
     })
   }

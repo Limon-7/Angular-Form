@@ -1,0 +1,7 @@
+<div>
+    <h3>Child Component</h3>
+    <p>Input from Parent: {{ message }}</p>
+    <p #localMessageRef>{{ localMessage }}</p>
+    <ng-content></ng-content> <!-- Content projection -->
+    <button (click)="updateMessage()" class="btn btn-secondary">Update Local Message</button>
+</div>

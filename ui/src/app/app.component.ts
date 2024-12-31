@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.createOnline$().subscribe(isonline => {
       this.isConnection = isonline;
-      console.log("isonline:", isonline)
+      // console.log("isonline:", isonline)
     })
   }
   notify() {
