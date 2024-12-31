@@ -14,6 +14,7 @@ import { ListItemComponent } from './template-outlet/list-item/list-item.compone
 import { ViewChildComponent } from './view-child/view-child.component';
 import { ViewChildrenComponent } from './view-children/view-children.component';
 import { ChildComponent } from './view-child/child/child.component';
+import { AppHighLightDirective } from './app-high-light.directive';
 
 
 
@@ -29,7 +30,8 @@ import { ChildComponent } from './view-child/child/child.component';
     ListItemComponent,
     ViewChildComponent,
     ViewChildrenComponent,
-    ChildComponent
+    ChildComponent,
+    AppHighLightDirective
   ],
   imports: [
     CommonModule,

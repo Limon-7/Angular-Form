@@ -1,5 +1,6 @@
 <section class="container templete-reference">
-  <h1 class="text-center">Template Reference Example</h1>
+<div class="conatiner bg-dark text-white">
+  <h1 class="text-center">Template Reference Varibale in form</h1>
   <form>
     {{ password.value | json }}
     {{ email.value | json }}
@@ -36,9 +37,16 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
-  <hr />
+  <hr>
+  <!-- Dirrective with template variable -->
+  <p appHighlight #highlight="highlight">Highlight me!</p>
+  <button (click)="highlight.highlight('yellow')">Highlight</button>
+  <button (click)="highlight.clear()">Clear</button>
+</div>
+  <div class="">
   <h4>
     {{ cusomerList.selectedCustomer?.name }}
   </h4>
   <app-customer-list #cusomerList="customerList"></app-customer-list>
+  </div>
 </section>

@@ -9,7 +9,7 @@ import Customer from '../customer';
 })
 export class CustomerListComponent implements OnInit {
 
-  selectedCustomer
+  selectedCustomer: Customer;
 
   customers: Customer[] = [
 
