@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Blog.API.Persistence.Context;
 using Blog.API.Persistence.Entities;
+using Blog.API.Response;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,22 +22,42 @@ namespace Blog.API.Controllers
 
         // GET: api/Products
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+        public async Task<ActionResult<IList<Product>>> GetProducts()
         {
-            return await _context.Products.Include(x=>x.Brand).ToListAsync();
+            var query = ProductResponseQuery();
+                
+            var products=await query.ToListAsync();
+            return Ok(products);
+        }
+
+        private IQueryable<ProductResponse> ProductResponseQuery()
+        {
+            var query = _context.Products
+                .Include(x => x.Brand)
+                .Select(x =>
+                    new ProductResponse()
+                    {
+                        ProductId = x.ProductId,
+                        ProductName = x.ProductName,
+                        Price = x.Price,
+                        CreatedAt = x.CreatedAt,
+                        LastModifiedAt = x.LastModifiedAt,
+                        BrandId = x.BrandId,
+                        BrandName = x.Brand.Name
+                    });
+            return query;
         }
 
         // GET: api/Products/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProduct(int id)
+        public async Task<ActionResult<ProductResponse>> GetProduct(int id)
         {
-            var product = await _context.Products
-                .Include(x=>x.Brand)
+            var product = await ProductResponseQuery()
                 .FirstOrDefaultAsync(p=>p.ProductId==id);
 
             if (product == null) return NotFound();
 
-            return product;
+            return Ok(product);
         }
 
         // PUT: api/Products/5
