@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { IsUsernameExitsPasswordDirective } from './directives/is-username-exits-password.directive';
 import { ConfirmPasswordValidatorDirective } from './directives/confirm-password-validator.directive';
 import { FormFocusDirective } from './directives/form-focus.directive';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 
 
@@ -19,7 +20,8 @@ import { FormFocusDirective } from './directives/form-focus.directive';
     HomeComponent,
     IsUsernameExitsPasswordDirective,
     ConfirmPasswordValidatorDirective,
-    FormFocusDirective
+    FormFocusDirective,
+    ClickOutsideDirective
   ],
   imports: [
     CommonModule,
@@ -33,6 +35,7 @@ import { FormFocusDirective } from './directives/form-focus.directive';
     HomeComponent,
     IsUsernameExitsPasswordDirective,
     FormFocusDirective,
+    ClickOutsideDirective
     // ToastrModule,
     // BrowserAnimationsModule,
   ]

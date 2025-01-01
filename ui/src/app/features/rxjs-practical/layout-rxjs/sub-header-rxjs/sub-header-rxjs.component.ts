@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sub-header-rxjs.component.css']
 })
 export class SubHeaderRxjsComponent implements OnInit {
+onClickOutside() {
+throw new Error('Method not implemented.');
+}
 
   constructor() { }
 
