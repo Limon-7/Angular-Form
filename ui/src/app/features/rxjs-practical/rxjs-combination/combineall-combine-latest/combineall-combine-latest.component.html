@@ -1,1 +1,24 @@
-<p>combineall-combine-latest works!</p>
+<div class="conatiner">
+    <h1>Create</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Obserable.create()</div>
+          <div class="card-body">
+            <ul class="list-group" [id]="combineAllId"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">new Obserable()</div>
+          <div class="card-body">
+            <ul class="list-group" [id]="combineAllId2"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-sm" (click)="previous()">Previous</button>
+    <button class="btn btn-danger btn-sm" (click)="nextPage()">next</button>
+  </div>
+  
